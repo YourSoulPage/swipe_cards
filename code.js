@@ -3,9 +3,9 @@ let cards = Array.from(container.children);
 
 // Пресеты позиций (как на вашей картинке)
 const states = [
-    { top: '20%', left: '50%', rotate: '5deg', zIndex: 3 },  // Центр (верхняя)
-    { top: '10%', left: '10%', rotate: '-12deg', zIndex: 2 }, // Слева (средняя)
-    { top: '5%', left: '45%', rotate: '15deg', zIndex: 1 }   // Справа (нижняя)
+    { top: '20%', left: '70%', rotate: '5deg', zIndex: 3 },  // Центр (верхняя)
+    { top: '10%', left: '30%', rotate: '-12deg', zIndex: 2 }, // Слева (средняя)
+    { top: '5%', left: '75%', rotate: '15deg', zIndex: 1 }   // Справа (нижняя)
 ];
 
 function applyStates() {
@@ -95,4 +95,5 @@ container.addEventListener('touchend', e => {
 });
 
 initCal();
+
 applyStates(); // Применяем начальные позиции
