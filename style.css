@@ -1,0 +1,142 @@
+/* Общие настройки для мобилок */
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; /* Убирает синее выделение при клике */
+}
+
+body {
+    background-color: #4a0404;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Чтобы ничего не дергалось */
+    touch-action: none; 
+}
+
+/* Контейнер подстраивается под ширину экрана */
+.scene {
+    position: relative;
+    width: 90vw;  /* Используем 90% ширины экрана */
+    max-width: 350px; /* Но не шире 350px */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    position: absolute;
+    width: 200px; /* Базовая ширина для мобилок */
+    height: 260px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 10px 15px 25px rgba(0,0,0,0.5);
+    /* Центрируем точку трансформации */
+    left: 50%;
+    top: 40%;
+}
+
+/* Полароид */
+.polaroid {
+    background: #721c24;
+    padding: 10px 10px 45px 10px;
+    width: 210px; /* Чуть больше остальных */
+    height: 270px;
+    border-radius: 2px;
+}
+
+.photo-space {
+    width: 100%;
+    height: 100%;
+    background: #111;
+    overflow: hidden;
+}
+
+.photo-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Календарь */
+.calendar {
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    color: #000;
+}
+
+.cal-header {
+    font-size: 1.1rem;
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+}
+
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    text-align: center;
+    row-gap: 8px;
+}
+
+.day-label {
+    font-size: 8px;
+    color: #cc0000; /* Красные буквы дней недели */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cal-grid div:not(.day-label) {
+    font-size: 12px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active-day {
+    color: red;
+    font-weight: bold;
+    outline: 1.5px solid red; /* Тонкая рамка */
+    outline-offset: 2px;
+}
+
+/* Письмо */
+.letter {
+    padding: 20px;
+    background: #fdfcf0;
+    border-left: 1px solid #ffadad;
+    border-radius: 2px;
+    font-family: 'Courier New', serif; /* Имитация печатной машинки или письма */
+    font-size: 13px;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* Текст внизу */
+.footer-text {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    color: #f3d1a7;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
+    opacity: 0.8;
+}
+
+/* Анимация улета для мобилки (вниз и в сторону) */
+.swipe-anim {
+    transform: translate(-50%, 150%) rotate(40deg) !important;
+    opacity: 0;
+}
