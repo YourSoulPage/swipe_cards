@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #4a0404;
+    background-color: #852c4c;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -139,4 +139,5 @@ body {
 .swipe-anim {
     transform: translate(-50%, 150%) rotate(40deg) !important;
     opacity: 0;
+
 }
